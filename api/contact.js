@@ -1,20 +1,18 @@
-const nodemailer = require('nodemailer');
-
-module.exports = async function handler(req, res) {
+export default async function handler(request, response) {
   // Enable CORS
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+  response.setHeader('Access-Control-Allow-Credentials', 'true');
+  response.setHeader('Access-Control-Allow-Origin', '*');
+  response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  response.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
+  if (request.method === 'OPTIONS') {
+    response.status(200).end();
     return;
   }
 
   // Health check endpoint
-  if (req.method === 'GET') {
-    return res.status(200).json({ 
+  if (request.method === 'GET') {
+    return response.status(200).json({ 
       status: 'API is working',
       env: {
         host: process.env.SMTP_HOST ? 'Set' : 'Not set',
@@ -25,28 +23,31 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const { name, email, company, phone, service, message } = req.body;
-
-  // Validation
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Name, email, and message are required' });
-  }
-
-  // Check environment variables
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    return res.status(500).json({ 
-      error: 'Server configuration error',
-      details: 'Missing SMTP configuration. Please check environment variables.'
-    });
+  if (request.method !== 'POST') {
+    return response.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    // Create transporter with better TLS settings for Hostinger
-    const transporter = nodemailer.createTransport({
+    // Dynamic import nodemailer
+    const nodemailer = await import('nodemailer');
+    
+    const { name, email, company, phone, service, message } = request.body;
+
+    // Validation
+    if (!name || !email || !message) {
+      return response.status(400).json({ error: 'Name, email, and message are required' });
+    }
+
+    // Check environment variables
+    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      return response.status(500).json({ 
+        error: 'Server configuration error',
+        details: 'Missing SMTP configuration'
+      });
+    }
+
+    // Create transporter
+    const transporter = nodemailer.default.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false,
@@ -59,7 +60,7 @@ module.exports = async function handler(req, res) {
       },
     });
 
-    // Verify transporter configuration
+    // Verify connection
     await transporter.verify();
 
     // Email content
@@ -105,16 +106,14 @@ module.exports = async function handler(req, res) {
     };
 
     // Send email
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.messageId);
+    await transporter.sendMail(mailOptions);
 
-    res.status(200).json({ success: true, message: 'Email sent successfully' });
+    response.status(200).json({ success: true, message: 'Email sent successfully' });
   } catch (error) {
-    console.error('Email sending error:', error);
-    res.status(500).json({ 
+    console.error('Error:', error);
+    response.status(500).json({ 
       error: 'Failed to send email',
-      details: error.message,
-      code: error.code
+      details: error.message
     });
   }
-};
+}
