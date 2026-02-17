@@ -48,11 +48,11 @@ const Contact: React.FC = () => {
         });
       } else {
         setSubmitStatus('error');
-        setErrorMessage(data.error || 'Failed to send message');
+        setErrorMessage(data.details || data.error || 'Failed to send message');
       }
     } catch (error) {
       setSubmitStatus('error');
-      setErrorMessage('Network error. Please try again.');
+      setErrorMessage('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }

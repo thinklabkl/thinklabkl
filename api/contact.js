@@ -12,6 +12,19 @@ module.exports = async function handler(req, res) {
     return;
   }
 
+  // Health check endpoint
+  if (req.method === 'GET') {
+    return res.status(200).json({ 
+      status: 'API is working',
+      env: {
+        host: process.env.SMTP_HOST ? 'Set' : 'Not set',
+        port: process.env.SMTP_PORT ? 'Set' : 'Not set',
+        user: process.env.SMTP_USER ? 'Set' : 'Not set',
+        pass: process.env.SMTP_PASS ? 'Set' : 'Not set',
+      }
+    });
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -23,8 +36,16 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Name, email, and message are required' });
   }
 
+  // Check environment variables
+  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    return res.status(500).json({ 
+      error: 'Server configuration error',
+      details: 'Missing SMTP configuration. Please check environment variables.'
+    });
+  }
+
   try {
-    // Create transporter
+    // Create transporter with better TLS settings for Hostinger
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
@@ -34,9 +55,12 @@ module.exports = async function handler(req, res) {
         pass: process.env.SMTP_PASS,
       },
       tls: {
-        ciphers: 'SSLv3',
+        rejectUnauthorized: false,
       },
     });
+
+    // Verify transporter configuration
+    await transporter.verify();
 
     // Email content
     const mailOptions = {
@@ -81,11 +105,16 @@ module.exports = async function handler(req, res) {
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent:', info.messageId);
 
     res.status(200).json({ success: true, message: 'Email sent successfully' });
   } catch (error) {
     console.error('Email sending error:', error);
-    res.status(500).json({ error: 'Failed to send email' });
+    res.status(500).json({ 
+      error: 'Failed to send email',
+      details: error.message,
+      code: error.code
+    });
   }
 };
