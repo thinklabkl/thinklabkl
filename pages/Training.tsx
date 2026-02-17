@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { Clock, Layers, Laptop, Shield, UserCheck, Microscope, Zap, ChevronDown, ChevronUp, CheckCircle2, Target } from 'lucide-react';
 import industrySpecificImage from '../assets/images/training/Industry-Specific Training.png';
 import immersiveLearningImage from '../assets/images/training/Immersive Learning.png';
@@ -496,9 +496,11 @@ const Training: React.FC = () => {
             <p className="text-slate-400 max-w-2xl mx-auto text-lg mb-10">
               We design specialized internal training systems for enterprise clients, including proprietary curriculum development and internal LMS integration.
             </p>
-            <button className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20">
-              Consult with an Expert
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20">
+                Consult with an Expert
+              </button>
+            </Link>
           </div>
         </div>
       </section>
