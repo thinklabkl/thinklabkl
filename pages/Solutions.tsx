@@ -66,7 +66,7 @@ const ShowcasePopup: React.FC<{ onClose: () => void; title: string; projects: an
               />
             </div>
             <div className="p-4 bg-slate-900/80 border-t border-slate-800 text-center">
-              <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em]">Thinklab {title} Showcase &copy; Strategic Execution</p>
+              <p className="text-slate-400 text-[10px] uppercase tracking-[0.2em]">ThinkLab {title} Showcase &copy; Strategic Execution</p>
             </div>
           </div>
         )}
@@ -107,7 +107,7 @@ const ShowcasePopup: React.FC<{ onClose: () => void; title: string; projects: an
                     </div>
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/40 to-transparent opacity-90 group-hover/proj:opacity-100 transition-opacity flex items-end p-8 pointer-events-none">
                       <div>
-                        <span className="text-blue-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-3 block">Thinklab</span>
+                        <span className="text-blue-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-3 block">ThinkLab</span>
                         <span className="text-white text-xl font-bold uppercase tracking-[0.2em]">{p.title}</span>
                       </div>
                     </div>
@@ -233,7 +233,7 @@ const Solutions: React.FC = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">Strategic Corporate Solutions</h1>
             <p className="text-xl text-slate-300 leading-relaxed font-light">
-              Thinklab provides executive-level consultancy and training to help organizations navigate industrial shifts, safety requirements, and competency evolution with precision.
+              ThinkLab provides executive-level consultancy and training to help organizations navigate industrial shifts, safety requirements, and competency evolution with precision.
             </p>
           </div>
         </div>

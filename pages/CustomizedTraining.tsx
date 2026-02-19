@@ -99,7 +99,7 @@ const CustomizedTraining: React.FC = () => {
         {/* Methodology Section */}
         <div className="mt-40">
           <div className="text-center mb-20">
-            <span className="text-blue-600 font-bold uppercase tracking-[0.4em] text-[10px] mb-4 block">Thinklab Standard Operating Procedure</span>
+            <span className="text-blue-600 font-bold uppercase tracking-[0.4em] text-[10px] mb-4 block">ThinkLab Standard Operating Procedure</span>
             <h2 className="text-4xl font-bold text-slate-900">Strategic Methodology</h2>
             <div className="w-16 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
           </div>

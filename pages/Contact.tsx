@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-blue-100 rounded-xl text-blue-600"><MapPin size={20} /></div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Thinklab Head Office</div>
+                  <div className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">ThinkLab Head Office</div>
                   <div className="text-slate-900 font-medium leading-relaxed">
                     Lot 1.47 Tower A, Ground Floor,<br />
                     Bangsar Trade Centre, Jalan Pantai Baharu,<br />

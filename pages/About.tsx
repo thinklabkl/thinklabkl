@@ -31,7 +31,7 @@ const About: React.FC = () => {
       {/* Header */}
       <div className="bg-slate-50 py-24 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">About Thinklab</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">About ThinkLab</h1>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const About: React.FC = () => {
               <div className="h-[90%] rounded-xl overflow-hidden shadow-sm group">
                 <img
                   src={heroImage}
-                  alt="Thinklab Innovation"
+                  alt="ThinkLab Innovation"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
@@ -63,13 +63,13 @@ const About: React.FC = () => {
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-8 text-slate-600 text-lg leading-relaxed text-justify">
               <p>
-                Thinklab is a multidisciplinary capability development and innovation hub dedicated to delivering high-impact training, consultancy, and professional competency solutions across industries. With a strong focus on future-ready skills, Thinklab integrates technology, industry expertise, and applied learning approaches to support organisations and professionals in navigating digital transformation, operational excellence, and emerging industry demands.
+                ThinkLab is a multidisciplinary capability development and innovation hub dedicated to delivering high-impact training, consultancy, and professional competency solutions across industries. With a strong focus on future-ready skills, ThinkLab integrates technology, industry expertise, and applied learning approaches to support organisations and professionals in navigating digital transformation, operational excellence, and emerging industry demands.
               </p>
               <p>
-                Leveraging a network of experienced practitioners, industry specialists and strategic partners, Thinklab designs and delivers customised programmes covering areas such as digital technologies, technical competencies, sustainability, safety and compliance, leadership development, and organisational transformation. Our solutions are structured to combine practical knowledge, industry case applications and competency-based learning frameworks that enable measurable performance improvement.
+                Leveraging a network of experienced practitioners, industry specialists and strategic partners, ThinkLab designs and delivers customised programmes covering areas such as digital technologies, technical competencies, sustainability, safety and compliance, leadership development, and organisational transformation. Our solutions are structured to combine practical knowledge, industry case applications and competency-based learning frameworks that enable measurable performance improvement.
               </p>
               <p>
-                Serving clients in Malaysia and internationally, Thinklab is committed to building resilient, innovative, and high-performing workforces by providing end-to-end services that include training, advisory, certification support, and strategic capability development initiatives aligned with evolving global standards and industry needs.
+                Serving clients in Malaysia and internationally, ThinkLab is committed to building resilient, innovative, and high-performing workforces by providing end-to-end services that include training, advisory, certification support, and strategic capability development initiatives aligned with evolving global standards and industry needs.
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@ const About: React.FC = () => {
             <div className="absolute -inset-4 bg-blue-600/5 rounded-[2.5rem] -rotate-2"></div>
             <img
               src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200"
-              alt="Thinklab Corporate Environment"
+              alt="ThinkLab Corporate Environment"
               className="relative rounded-3xl shadow-2xl w-full h-64 lg:h-full object-cover"
             />
             <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">

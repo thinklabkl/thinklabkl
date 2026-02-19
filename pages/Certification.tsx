@@ -59,7 +59,7 @@ const Certification: React.FC = () => {
             <div className="animate-in fade-in slide-in-from-left-4 duration-700">
               <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Accreditation & Certification</h1>
               <p className="text-xl text-slate-300 leading-relaxed mb-10">
-                Thinklab partners with Malaysia's leading regulatory bodies to provide recognized professional credentials that validate your industrial competency and technical mastery.
+                ThinkLab partners with Malaysia's leading regulatory bodies to provide recognized professional credentials that validate your industrial competency and technical mastery.
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <div className="flex items-center text-blue-400 font-medium"><CheckCircle className="mr-2 w-5 h-5" /> Regulatory Compliance</div>

@@ -100,7 +100,7 @@ const Highlights: React.FC = () => {
     },
     {
       url: facility04,
-      title: "Thinklab Innovation Center",
+      title: "ThinkLab Innovation Center",
       category: "Facilities",
       description: "Our dedicated laboratory for research and development in industrial automation and technology."
     },
@@ -166,9 +166,9 @@ const Highlights: React.FC = () => {
     },
     {
       url: facility16,
-      title: "Thinklab Admin Wing",
+      title: "ThinkLab Admin Wing",
       category: "Facilities",
-      description: "Management and coordination offices for all Thinklab training and programs."
+      description: "Management and coordination offices for all ThinkLab training and programs."
     },
 
     // EVENTS
@@ -186,7 +186,7 @@ const Highlights: React.FC = () => {
     },
     {
       url: event08,
-      title: "Thinklab Innovation Awards",
+      title: "ThinkLab Innovation Awards",
       category: "Events",
       description: "Recognizing outstanding contributions to industrial innovation and professional excellence."
     },
@@ -306,7 +306,7 @@ const Highlights: React.FC = () => {
           </Link>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Gallery & Highlights</h1>
           <p className="text-xl text-slate-400 max-w-3xl leading-relaxed text-justify">
-            A visual documentation of Thinklab's commitment to excellence, showcasing our environments, our people, and the tangible impact of our programs.
+            A visual documentation of ThinkLab's commitment to excellence, showcasing our environments, our people, and the tangible impact of our programs.
           </p>
         </div>
       </div>

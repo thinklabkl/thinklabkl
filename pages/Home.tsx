@@ -42,13 +42,13 @@ const Home: React.FC = () => {
   ];
 
   const showcaseImages = [
-    { url: event08, alt: "Thinklab Innovation Awards", span: "md:col-span-2 md:row-span-2" },
+    { url: event08, alt: "ThinkLab Innovation Awards", span: "md:col-span-2 md:row-span-2" },
     { url: training01, alt: "Technical Safety Training", span: "" },
     { url: facility03, alt: "Advanced Computer Lab", span: "" },
     { url: event02, alt: "Global Leadership Summit", span: "md:col-span-2" },
     { url: training02, alt: "Industrial Skills Workshop", span: "" },
     { url: event05, alt: "Industry Expert Workshop", span: "md:col-span-2" },
-    { url: facility04, alt: "Thinklab Innovation Center", span: "" }
+    { url: facility04, alt: "ThinkLab Innovation Center", span: "" }
   ];
 
   const selectedItem = selectedIndex !== null ? showcaseImages[selectedIndex] : null;
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Industry Excellence.</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-              Thinklab is a multidisciplinary training and consultancy organization focused on high-stakes professional development and global competency.
+              ThinkLab is a multidisciplinary training and consultancy organization focused on high-stakes professional development and global competency.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               <Link to="/solutions" className="bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all flex items-center text-lg w-full sm:w-auto justify-center shadow-xl shadow-blue-600/20">

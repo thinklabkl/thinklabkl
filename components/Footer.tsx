@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-900 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-medium tracking-widest uppercase">
-          <p className="text-slate-500">© {new Date().getFullYear()} Thinklab SDN BHD. All rights reserved.</p>
+          <p className="text-slate-500">© {new Date().getFullYear()} ThinkLab SDN BHD. All rights reserved.</p>
         </div>
       </div>
     </footer>
