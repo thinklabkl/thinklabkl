@@ -310,13 +310,13 @@ const Training: React.FC = () => {
       description: "Advanced methodology for conducting internal and external HSE audits within high-stakes industrial environments. This course is designed to develop competent professionals capable of evaluating, auditing, and monitoring organizational compliance with Health, Safety, and Environment (HSE) requirements."
     },
     {
-      title: "Advanced ERT & ERP Implementation",
+      title: "ERT & ERP Implementation",
       cat: "Health & Safety",
       image: ertErpImage,
       description: "Advanced understanding of emergency risk assessment, incident command structures, roles and responsibilities of ERT members, and coordination with internal and external stakeholders. The course emphasizes practical implementation, including emergency procedures, communication protocols, evacuation planning, emergency equipment deployment, and post-incident recovery. It is designed and customized to strengthen organizational preparedness and response capability during emergency situations."
     },
     {
-      title: "Chemical Handling & Safety",
+      title: "Chemical Handling & Safety Management",
       cat: "Health & Safety",
       image: chemicalHandlingImage,
       description: "Essential awareness and practical understanding of safe chemical management in the workplace. The course addresses the identification of chemical hazards, associated health, safety, and environmental risks, and the application of safe handling practices throughout the chemical lifecycle—storage, use, transport, and disposal."

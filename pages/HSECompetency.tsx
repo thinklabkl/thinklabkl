@@ -13,7 +13,7 @@ const HSECompetency: React.FC = () => {
       icon: <ShieldCheck className="w-8 h-8 text-blue-600" />,
       image: safetyLeadershipImg,
       description: "Empowering organizational leaders to cultivate a proactive safety culture that transcends compliance, making safety a core business value.",
-      points: ["Executive Safety Briefings", "Culture Maturity Assessment", "Safety Audit", "Behavioral Safety Leadership"]
+      points: ["Executive Safety Briefings", "Culture Maturity Assessment", "Security & Safety Audit", "Behavioral Safety Leadership"]
     },
     {
       title: "Risk Assessment Mastery",

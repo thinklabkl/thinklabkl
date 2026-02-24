@@ -101,7 +101,7 @@ const Home: React.FC = () => {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
               Master the Future of <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Industry Excellence.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Industry Excellence</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
               ThinkLab is a multidisciplinary training and consultancy organization focused on high-stakes professional development and global competency.
