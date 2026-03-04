@@ -65,9 +65,13 @@ const Footer: React.FC = () => {
                   Lot 1.47 Tower A, Ground Floor, Bangsar Trade Centre, Jalan Pantai Baharu, 59200 KL
                 </span>
               </li>
-              <li className="flex items-center group">
+              <li className="flex items-start group">
                 <Phone className="mr-4 w-5 h-5 text-blue-500 shrink-0 group-hover:scale-110 transition-transform" />
-                <span>03-2282 9118</span>
+                <div className="flex flex-col">
+                  <span>03-2282 9118</span>
+                  <span>013-533 8823</span>
+                  <span>012-801 5505</span>
+                </div>
               </li>
               <li className="flex items-center group">
                 <Mail className="mr-4 w-5 h-5 text-blue-500 shrink-0 group-hover:scale-110 transition-transform" />

@@ -7,13 +7,13 @@ import heroImage from '../assets/images/home/hero.png';
 
 // Import Highlight Images for Showcase
 import event02 from '../assets/images/highlight/event/Event 02.jpeg';
-import event05 from '../assets/images/highlight/event/Event 05.jpeg';
 import event08 from '../assets/images/highlight/event/Event 08.jpeg';
 import facility03 from '../assets/images/highlight/facilities/Facility 03.jpeg';
 import facility04 from '../assets/images/highlight/facilities/Facility 04.png';
 
 import training01 from '../assets/images/highlight/training/Training 01.jpg';
 import training02 from '../assets/images/highlight/training/Training 02.jpg';
+import training07 from '../assets/images/highlight/training/Training 07.jpeg';
 
 const Home: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -47,8 +47,8 @@ const Home: React.FC = () => {
     { url: facility03, alt: "Advanced Computer Lab", span: "" },
     { url: event02, alt: "Global Leadership Summit", span: "md:col-span-2" },
     { url: training02, alt: "Industrial Skills Workshop", span: "" },
-    { url: event05, alt: "Industry Expert Workshop", span: "md:col-span-2" },
-    { url: facility04, alt: "ThinkLab Innovation Center", span: "" }
+    { url: training07, alt: "Workplace Safety Assessment", span: "" },
+    { url: facility04, alt: "ThinkLab Innovation Center", span: "md:col-span-2" }
   ];
 
   const selectedItem = selectedIndex !== null ? showcaseImages[selectedIndex] : null;

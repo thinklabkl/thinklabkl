@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 // Event Images
 import event02 from '../assets/images/highlight/event/Event 02.jpeg';
-import event05 from '../assets/images/highlight/event/Event 05.jpeg';
 import event08 from '../assets/images/highlight/event/Event 08.jpeg';
 import event09 from '../assets/images/highlight/event/Event 09.jpeg';
 import event10 from '../assets/images/highlight/event/Event 10.jpeg';
@@ -177,12 +176,6 @@ const Highlights: React.FC = () => {
       title: "Global Leadership Summit",
       category: "Events",
       description: "Gathering of industry leaders and corporate partners to discuss emerging trends and organizational excellence."
-    },
-    {
-      url: event05,
-      title: "Industry Expert Workshop",
-      category: "Events",
-      description: "A deep-dive technical session led by global experts in industrial safety and digital transformation."
     },
     {
       url: event08,

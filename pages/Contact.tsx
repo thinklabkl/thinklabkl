@@ -88,6 +88,8 @@ const Contact: React.FC = () => {
                   <div>
                     <div className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Phone</div>
                     <div className="text-slate-900 font-medium">03-2282 9118</div>
+                    <div className="text-slate-900 font-medium">013-533 8823</div>
+                    <div className="text-slate-900 font-medium">012-801 5505</div>
                   </div>
                 </div>
               </div>

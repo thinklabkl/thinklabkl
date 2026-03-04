@@ -4,9 +4,29 @@ import { ArrowLeft, Award, Clock, Users, BadgeCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import acmvImg from '../assets/images/certification/cidb courses/Air Conditioning & Mechanical Ventilation.png';
 import fireProtectionImg from '../assets/images/certification/cidb courses/Fire Protection.png';
+import ccmImg from '../assets/images/certification/cidb courses/Certified Construction Manager Training.png';
+import ccpmImg from '../assets/images/certification/cidb courses/Certified Construction Project Manager Training.png';
 
 const CIDBCourses: React.FC = () => {
   const courses = [
+    {
+      title: "Certified Construction Manager (CCM) Training",
+      icon: <Award className="w-8 h-8 text-blue-600" />,
+      image: ccmImg,
+      duration: "5 Days",
+      audience: "Aspiring and practicing site managers, construction professionals",
+      description: "The Certified Construction Manager (CCM) Training prepares construction professionals to achieve the prestigious CIDB Malaysia Level 5 certification, recognizing excellence in on-site construction management. Awarded by the Construction Industry Development Board Malaysia (CIDB), the CCM credential formalizes the operational leadership skills required to manage daily site activities effectively — from tendering and mobilization to construction execution and project close-out. This programme equips participants with the practical competencies to coordinate resources, supervise site teams, ensure regulatory compliance, and deliver projects safely, efficiently, and within budget. Designed for aspiring and practicing site managers, this training strengthens tactical decision-making and reinforces professional credibility within Malaysia's construction industry.",
+      suitableFor: "Aspiring and practicing site managers, construction professionals seeking CIDB Level 5 certification."
+    },
+    {
+      title: "Certified Construction Project Manager (CCPM) Training",
+      icon: <BadgeCheck className="w-8 h-8 text-blue-600" />,
+      image: ccpmImg,
+      duration: "5 Days",
+      audience: "Senior project leaders, aspiring project directors, project managers",
+      description: "The Certified Construction Project Manager (CCPM) Training prepares construction professionals to attain the prestigious CIDB Malaysia Level 6 certification — a formal recognition of advanced project leadership competency in Malaysia's construction industry. Established under the provisions of CIDB Act 520, the CCPM credential validates qualified and competent project managers who are authorized to lead construction projects in compliance with national regulatory requirements. Positioned at the strategic management level, this programme equips participants with the technical expertise, managerial capability, and professional judgment required to manage projects across the overall project lifecycle. Designed for senior project leaders and aspiring project directors, the CCPM Training strengthens strategic decision-making, governance oversight, and industry credibility at the highest operational tier.",
+      suitableFor: "Senior project leaders, aspiring project directors, and project managers seeking CIDB Level 6 certification."
+    },
     {
       title: "Air Conditioning & Mechanical Ventilation (ACMV) Course",
       icon: <Award className="w-8 h-8 text-blue-600" />,
