@@ -43,7 +43,7 @@ const About: React.FC = () => {
           <div className="mb-12">
             <span className="text-blue-600 font-bold text-[10px] uppercase tracking-[0.4em] mb-4 block">Corporate Overview</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-              Driving Organizational <br /> Excellence through <br /> Innovation.
+              Driving Organizational <br /> Excellence through <br /> Innovation
             </h2>
           </div>
 

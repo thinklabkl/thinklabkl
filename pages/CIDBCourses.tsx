@@ -13,18 +13,18 @@ const CIDBCourses: React.FC = () => {
       title: "Certified Construction Manager (CCM) Training",
       icon: <Award className="w-8 h-8 text-blue-600" />,
       image: ccmImg,
-      duration: "5 Days",
+      duration: "",
       audience: "Aspiring and practicing site managers, construction professionals",
-      description: "The Certified Construction Manager (CCM) Training prepares construction professionals to achieve the prestigious CIDB Malaysia Level 5 certification, recognizing excellence in on-site construction management. Awarded by the Construction Industry Development Board Malaysia (CIDB), the CCM credential formalizes the operational leadership skills required to manage daily site activities effectively — from tendering and mobilization to construction execution and project close-out. This programme equips participants with the practical competencies to coordinate resources, supervise site teams, ensure regulatory compliance, and deliver projects safely, efficiently, and within budget. Designed for aspiring and practicing site managers, this training strengthens tactical decision-making and reinforces professional credibility within Malaysia's construction industry.",
+      description: "The Certified Construction Manager (CCM) Training prepares construction professionals to achieve the prestigious CIDB Malaysia Level 5 certification, recognizing excellence in on-site construction management. Awarded by the Construction Industry Development Board Malaysia (CIDB), the CCM credential formalizes the operational leadership skills required to manage daily site activities effectively — from tendering and mobilization to construction execution and project close-out. This programme equips participants with the practical competencies to coordinate resources, supervise site teams, ensure regulatory compliance, and deliver projects safely, efficiently, and within budget. The CCM training consist of three face-to-face classroom sessions scheduled 2-3 weeks apart, supported by revision exercises and continuous trainer-trainee engagement through an online learning group between sessions. Designed for aspiring and practicing site managers, this training strengthens tactical decision-making and reinforces professional credibility within Malaysia's construction industry.",
       suitableFor: "Aspiring and practicing site managers, construction professionals seeking CIDB Level 5 certification."
     },
     {
       title: "Certified Construction Project Manager (CCPM) Training",
       icon: <BadgeCheck className="w-8 h-8 text-blue-600" />,
       image: ccpmImg,
-      duration: "5 Days",
+      duration: "",
       audience: "Senior project leaders, aspiring project directors, project managers",
-      description: "The Certified Construction Project Manager (CCPM) Training prepares construction professionals to attain the prestigious CIDB Malaysia Level 6 certification — a formal recognition of advanced project leadership competency in Malaysia's construction industry. Established under the provisions of CIDB Act 520, the CCPM credential validates qualified and competent project managers who are authorized to lead construction projects in compliance with national regulatory requirements. Positioned at the strategic management level, this programme equips participants with the technical expertise, managerial capability, and professional judgment required to manage projects across the overall project lifecycle. Designed for senior project leaders and aspiring project directors, the CCPM Training strengthens strategic decision-making, governance oversight, and industry credibility at the highest operational tier.",
+      description: "The Certified Construction Project Manager (CCPM) Training is a comprehensive professional development program designed to prepare practicing Construction Project Managers to qualify as Certified Competent Project Managers (CCPM) in accordance with the Construction Industry Development Board (CIDB) Act 520, which mandates that construction projects be led by registered CCPMs under Section 33A. Delivered by experienced and qualified CCPM trainers, the program equips participants with the required competencies, professional standards, and industry-aligned best practices essential for effective and compliant project delivery. Training is conducted through a multi-training approach that integrates face-to-face sessions, collaborative group learning, structured online modules, and continuous support via a comprehensive CCPM learning portal, ensuring thorough preparation for CCPM certification and professional practice—an essential program for enhancing the professional career in project management.",
       suitableFor: "Senior project leaders, aspiring project directors, and project managers seeking CIDB Level 6 certification."
     },
     {
@@ -66,7 +66,7 @@ const CIDBCourses: React.FC = () => {
           </Link>
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">CIDB Certified Courses</h1>
-            <p className="text-xl text-slate-300 leading-relaxed font-light">
+            <p className="text-xl text-slate-300 leading-relaxed font-light text-justify">
               Enhance technical proficiency within the construction sector through CIDB claimable programs. Specialized training modules designed to meet Construction Industry Development Board standards, supporting PKK registration and CPD points.
             </p>
           </div>
@@ -87,27 +87,29 @@ const CIDBCourses: React.FC = () => {
                   {course.icon}
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-4">{course.title}</h3>
-                
+
                 {/* Course Meta */}
                 <div className="flex flex-wrap gap-4 mb-6">
-                  <div className="flex items-center text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg">
-                    <Clock className="w-4 h-4 mr-2 text-blue-600" />
-                    {course.duration}
-                  </div>
+                  {course.duration && (
+                    <div className="flex items-center text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg">
+                      <Clock className="w-4 h-4 mr-2 text-blue-600" />
+                      {course.duration}
+                    </div>
+                  )}
                   <div className="flex items-center text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg">
                     <Users className="w-4 h-4 mr-2 text-blue-600" />
                     CIDB Certified
                   </div>
                 </div>
 
-                <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                <p className="text-slate-600 text-lg leading-relaxed mb-6 text-justify">
                   {course.description}
                 </p>
 
                 {/* Suitable For */}
                 <div className="mb-6 p-4 bg-blue-50/50 border border-blue-100 rounded-xl">
                   <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Suitable For</h4>
-                  <p className="text-slate-600 text-sm">{course.suitableFor}</p>
+                  <p className="text-slate-600 text-sm text-justify">{course.suitableFor}</p>
                 </div>
 
                 {/* CTA Button */}
@@ -151,7 +153,7 @@ const CIDBCourses: React.FC = () => {
                   {m.step}
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">{m.title}</h4>
-                <p className="text-slate-500 leading-relaxed text-sm">{m.desc}</p>
+                <p className="text-slate-500 leading-relaxed text-sm text-justify">{m.desc}</p>
               </div>
             ))}
           </div>

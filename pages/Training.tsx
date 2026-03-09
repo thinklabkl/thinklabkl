@@ -425,7 +425,7 @@ const Training: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Learning Hub</h2>
-          <p className="text-slate-600">Our physical and virtual environments are thoughtfully designed to foster meaningful professional transformation —empowering individuals and organisations to grow, adapt, and excel in today’s evolving landscape.</p>
+          <p className="text-slate-600">Our physical and virtual environments are thoughtfully designed to foster meaningful professional transformation — empowering individuals and organisations to grow, adapt, and excel in today’s evolving landscape.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {trainingGroundItems.map((item, i) => (
