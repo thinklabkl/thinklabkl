@@ -6,8 +6,8 @@ import { ArrowRight, ShieldCheck, Cpu, LineChart, Users, Zap, X, ChevronLeft, Ch
 import heroImage from '../assets/images/home/hero.png';
 
 // Import Highlight Images for Showcase
-import event02 from '../assets/images/highlight/event/Event 02.jpeg';
-import event08 from '../assets/images/highlight/event/Event 08.jpeg';
+import event09 from '../assets/images/highlight/event/Event 09.jpeg';
+import event11 from '../assets/images/highlight/event/Event 11.jpeg';
 import facility03 from '../assets/images/highlight/facilities/Facility 03.jpeg';
 import facility04 from '../assets/images/highlight/facilities/Facility 04.png';
 
@@ -42,10 +42,10 @@ const Home: React.FC = () => {
   ];
 
   const showcaseImages = [
-    { url: event08, alt: "ThinkLab Innovation Awards", span: "md:col-span-2 md:row-span-2" },
+    { url: event09, alt: "Technical Skills Showcase", span: "md:col-span-2 md:row-span-2" },
     { url: training01, alt: "Technical Safety Training", span: "" },
     { url: facility03, alt: "Advanced Computer Lab", span: "" },
-    { url: event02, alt: "Global Leadership Summit", span: "md:col-span-2" },
+    { url: event11, alt: "Safety & Health Awareness Day", span: "md:col-span-2" },
     { url: training02, alt: "Industrial Skills Workshop", span: "" },
     { url: training07, alt: "Workplace Safety Assessment", span: "" },
     { url: facility04, alt: "ThinkLab Innovation Center", span: "md:col-span-2" }

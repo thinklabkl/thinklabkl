@@ -5,10 +5,7 @@ import { Camera, Users, Building2, Zap, ArrowLeft, X, Maximize2, ChevronLeft, Ch
 import { Link } from 'react-router-dom';
 
 // Event Images
-import event02 from '../assets/images/highlight/event/Event 02.jpeg';
-import event08 from '../assets/images/highlight/event/Event 08.jpeg';
 import event09 from '../assets/images/highlight/event/Event 09.jpeg';
-import event10 from '../assets/images/highlight/event/Event 10.jpeg';
 import event11 from '../assets/images/highlight/event/Event 11.jpeg';
 
 // Facilities Images
@@ -172,28 +169,10 @@ const Highlights: React.FC = () => {
 
     // EVENTS
     {
-      url: event02,
-      title: "Global Leadership Summit",
-      category: "Events",
-      description: "Gathering of industry leaders and corporate partners to discuss emerging trends and organizational excellence."
-    },
-    {
-      url: event08,
-      title: "ThinkLab Innovation Awards",
-      category: "Events",
-      description: "Recognizing outstanding contributions to industrial innovation and professional excellence."
-    },
-    {
       url: event09,
       title: "Technical Skills Showcase",
       category: "Events",
       description: "Demonstrating the practical impact of our hands-on training via live demonstrations and case studies."
-    },
-    {
-      url: event10,
-      title: "Corporate Strategy Briefing",
-      category: "Events",
-      description: "Specialized briefing for executive partners on strategic workforce development and digital readiness."
     },
     {
       url: event11,
